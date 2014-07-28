@@ -1,10 +1,10 @@
 === Simple Classic ===
 Contributors: the BestWebSoft team
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
-Tags: black, white, gray, light, left-sidebar, fixed-width, threaded-comments, sticky-post, translation-ready, custom-menufeatured-image-header, featured-images
+Tags: black, white, gray, light, left-sidebar, fixed-width, threaded-comments, sticky-post, translation-ready, custom-menu, featured-image-header, featured-images
 Requires at least: 3.5
-Tested up to: 3.7.1
-Stable tag: 1.3.3
+Tested up to: 3.9.1
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ Simple Classic Wordpress theme is the most simple solution for your website.
 
 == Description ==
 
-Simple Classic Wordpress theme is the most simple solution for your website. It is clean and simple, that is why this theme can be used for various categories of websites.
+Simple Classic is professional, simple, fast and versatile. It has a less stylistic and more lightweight design. Coupled with a bunch of great features, Simple Classic might seem simple, but with that simplicity comes crispness and a sense of balance, and that is quite refreshing. Simple Classic is a great theme that will prove useful for a variety of different websites like daily news, news magazines, networking sites, etc. Yes, the theme is simple, but its subtle textures and details have been designed with great care. Moreover, it comes with absolute compatibility with all plugins produced by BestWebSoft, so you will have no problems with this issue. To keep your website streamlined and up-to-date, we suggest you install Captcha (http://wordpress.org/plugins/captcha/) and PDF & Print (http://wordpress.org/plugins/pdf-print/) plugins. Check out this theme's demo at http://bestwebsoft.com/wordpress_demo_theme/simpleclassic/
 
 == Installation ==
 
@@ -89,57 +89,64 @@ You can use our contact form, for any support questions: http://bestwebsoft.com/
 
 == Changelog ==
 
-= V1.3.3 - 07.11.2013 =
+= V 1.4 - 22.07.2014 =
+* Bugfix: Bugs in function.php were fixed.
+* Update: We checked theme for WordPress 3.9.1 and updated readme.txt.
+
+= V 1.3.3 - 07.11.2013 =
 * Bugfix: Fixed header image.
 
-= V1.3.2 - 04.11.2013 =
+= V 1.3.2 - 04.11.2013 =
 * Update: Updated function smplclssc_navigation.
 * Update: Updated footer.
 * Bugfix: Fixed custom header support.
 
-= V1.3.1 - 01.11.2013 =
+= V 1.3.1 - 01.11.2013 =
 * Update: Updated style of posts, sidebar and breadcrumds area.
 * NEW: Added styles for table area.
 
-= V1.3 - 15.10.2013 =
+= V 1.3 - 15.10.2013 =
 * Update: Updated Support of Custom Header.
 * Bugfix: Comment form.
 * NEW: Added file tag.php.
 * NEW: Added Russian language translation.
 
-= V1.2 - 07.10.2013 =
+= V 1.2 - 07.10.2013 =
 * Update: Updatede theme buttons.
 * Bugfix: Choose file area was fixed.
 * NEW: Added file image.php.
 * NEW: Added pagination.
 
-= V1.1 - 01.10.2013 =
+= V 1.1 - 01.10.2013 =
 * Update: Updatet menu in Admin UI.
 * Bugfix : Header Menu was fixed.
 * NEW: Added viewing attachment caption to thumbnails.
 
-= V1.0 =
+= V 1.0 =
 * Ability to use the Simpla Classic theme in you site.
 
 == Upgrade Notice ==
 
-= V1.3.3 =
+= V 1.4 =
+Bugs in function.php were fixed. We checked theme for WordPress 3.9.1 and updated readme.txt.
+
+= V 1.3.3 =
 Fixed options for header image.
 
-= V1.3.2 =
+= V 1.3.2 =
 Updated function smplclssc_navigation and footer credit links. Fixed custom header support.
 
-= V1.3.1 =
+= V 1.3.1 =
 Updated styles for post, sidebar and breadcrumbs areas. Added styles for table area.
 
-= V1.3 =
+= V 1.3 =
 Ability to translate your site into russian language. Added tag.php file.Updated support for Custom Header and fixed comment form.
 
-= V1.2 =
+= V 1.2 =
 Added ability to browse images on you site. Added pagination for easier searching needed information.Updated the buttons, which you can includ in your own forms. Fixed working of choose file area.
 
-= V1.1 =
+= V 1.1 =
 Ability to use Menu in Admin UI. Fixed Header Menu, now you can add more then 6 points of menu.Added attachment thumbnails, now image caption will be dislayed in main page.
 
-= V1.0  =
+= V 1.0  =
 Ability to use the Simpla Classic theme in you site. 

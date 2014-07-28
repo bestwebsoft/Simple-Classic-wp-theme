@@ -378,6 +378,3 @@ add_filter( 'wp_title', 'simpleclassic_filter_wp_title', 10, 3 );
 add_action( 'wp_enqueue_scripts', 'simpleclassic_script' );
 add_filter( 'simpleclassic_navigation', 'simpleclassic_navigation' );
 add_filter( 'simpleclassic_content_nav', 'simpleclassic_content_nav' );
-
-?>
-
