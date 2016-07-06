@@ -1,18 +1,21 @@
 === Simple Classic ===
-Contributors: the BestWebSoft team
+Contributors: BestWebLayout, BestWebSoft
+Author URI: http://bestweblayout.com/
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
-Tags: black, white, gray, light, left-sidebar, fixed-width, threaded-comments, sticky-post, translation-ready, custom-menu, featured-image-header, featured-images
-Requires at least: 3.5
-Tested up to: 3.9.1
-Stable tag: 1.4
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: two-columns, left-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, sticky-post, threaded-comments, translation-ready
+Requires at least: 4.2
+Tested up to: 4.5.3
+Stable tag: 1.7
+License: GNU General Public License V3
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Simple Classic WordPress Theme, Copyright 2016 BestWebLayout.com
+Simple Classic is distributed under the terms of the GNU GPL
 
-Simple Classic Wordpress theme is the most simple solution for your website.
+Simple Classic WordPress theme is the most simple solution for your website.
 
 == Description ==
 
-Simple Classic is professional, simple, fast and versatile. It has a less stylistic and more lightweight design. Coupled with a bunch of great features, Simple Classic might seem simple, but with that simplicity comes crispness and a sense of balance, and that is quite refreshing. Simple Classic is a great theme that will prove useful for a variety of different websites like daily news, news magazines, networking sites, etc. Yes, the theme is simple, but its subtle textures and details have been designed with great care. Moreover, it comes with absolute compatibility with all plugins produced by BestWebSoft, so you will have no problems with this issue. To keep your website streamlined and up-to-date, we suggest you install Captcha (http://wordpress.org/plugins/captcha/) and PDF & Print (http://wordpress.org/plugins/pdf-print/) plugins. Check out this theme's demo at http://bestwebsoft.com/wordpress_demo_theme/simpleclassic/
+Simple Classic is professional, simple, fast and versatile. It has a less stylistic and more lightweight design. Coupled with a bunch of great features, Simple Classic might seem simple, but with that simplicity comes crispness and a sense of balance, and that is quite refreshing. Simple Classic is a great theme that will prove useful for a variety of different websites like daily news, news magazines, networking sites, etc. Yes, the theme is simple, but its subtle textures and details have been designed with great care. Moreover, it comes with absolute compatibility with all plugins produced by BestWebSoft, so you will have no problems with this issue. To keep your website streamlined and up-to-date, we suggest you install Captcha (http://wordpress.org/plugins/captcha/) and PDF & Print (http://wordpress.org/plugins/pdf-print/) plugins. Check out this theme's demo at http://wp-demo-theme.bestweblayout.com/simpleclassic/
 
 == Installation ==
 
@@ -27,7 +30,7 @@ Installation using "Add New Theme"
 3. Click the 'Install' button to open the theme's repository listing
 4. Click the 'Install' button
 
-Activiation and Use
+Activation and Use
 
 1. Activate the Theme through the 'Themes' menu in WordPress
 
@@ -35,7 +38,7 @@ Activiation and Use
 
 * Russian (ru_RU)
 
-If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
+If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://support.bestweblayout.com" target="_blank">BestWebLayout</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
 
 = Copyrights for Resources used in this theme. =
 
@@ -77,7 +80,7 @@ The custom header image you can use. From your Admin UI (Dashboard), use the men
 
 = How change language from english to russian? =
 
-In main catalog of your WordPress site find file wp-config.php, open it and change define (‘WPLANG’); to define (‘WPLANG’, ‘ru_RU’);
+Change the language in the admin settings screen. Settings > General > Site Language.
 
 == Support ==
 
@@ -88,6 +91,25 @@ You can use our contact form, for any support questions: http://bestwebsoft.com/
 1) Theme home page.
 
 == Changelog ==
+
+= V1.7 - 06.07.2016 =
+* Bugfix: Fixed mismatch coding standards.
+* Bugfix: Fixed theme styles.
+* Update: Translations has been updated.
+* Update: Screenshot was updated to size 1200x900.
+* Update: The theme has been tested for the compatibility with WordPress v.4.5.3.
+* Update: Theme was transferred to new WordPress account.
+
+= V1.6 - 18.06.2015 =
+* Bugfix: Typo of textdomain in 404.php was fixed.
+* Bugfix: The <title> tag was removed from header.php.
+* Bugfix: The function add_theme_support( 'custom-header' ) was fixed.
+* Bugfix: Display the <input type="file"> form was fixed.
+
+= V1.5 - 01.04.2015 =
+* Update: We updated the theme to support features in WordPress 4.1.1.
+* Update: Screenshot was updated.
+* Update: The following files were updated: style.css, header.php, functions.php, screenshot.png.
 
 = V 1.4 - 22.07.2014 =
 * Bugfix: Bugs in function.php were fixed.
@@ -126,6 +148,15 @@ You can use our contact form, for any support questions: http://bestwebsoft.com/
 * Ability to use the Simpla Classic theme in you site.
 
 == Upgrade Notice ==
+
+= V1.7 =
+Fixed mismatch coding standards. Fixed theme styles. Translations has been updated. Screenshot was updated to size 1200x900. The theme has been tested for the compatibility with WordPress v.4.5.3. Theme was transferred to new WordPress account.
+
+= V1.6 =
+Typo of textdomain in 404.php was fixed. The <title> tag was removed from header.php. The function add_theme_support( 'custom-header' ) was fixed. Display the <input type="file"> form was fixed.
+
+= V1.5 =
+We updated the theme to support features in WordPress 4.1.1. Screenshot was updated. The following files were updated: style.css, header.php, functions.php.
 
 = V 1.4 =
 Bugs in function.php were fixed. We checked theme for WordPress 3.9.1 and updated readme.txt.
