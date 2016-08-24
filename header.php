@@ -13,9 +13,8 @@
 <!--[if IE 8]>
 <html class="ie ie8" <?php language_attributes(); ?>>
 <![endif]-->
-<!--[if lt IE 9]>
+<!--[if IE 9]>
 <html class="ie9" <?php language_attributes(); ?>>
-<script src="http://ie7-js.googlecode.com/svn/trunk/lib/IE9.js"></script>
 <![endif]-->
 <!--[if !(IE 7) | !(IE 8) | !(IE 9) ]><!-->
 <html <?php language_attributes(); ?> >
@@ -24,20 +23,22 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-	<?php wp_head(); ?>
+	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
+		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<?php endif;
+	wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 <div id="smplclssc_main-container">
 	<div id="smplclssc_header">
 		<div id="smplclssc_wrap-head">
 			<div id="smplclssc_head">
-				<hgroup id="smplclssc_preheader">
+				<div id="smplclssc_preheader">
 					<h1 id="smplclssc_site-title">
 						<a href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
 					</h1>
 					<h2 id="smplclssc_site-description"><?php bloginfo( 'description' ); ?></h2>
-				</hgroup><!-- #smplclssc_preheader -->
+				</div><!-- #smplclssc_preheader -->
 				<div id="nav">
 					<?php wp_nav_menu( array(
 						'theme_location' => 'primary',
@@ -79,10 +80,9 @@
 		</div><!-- #smplclssc_header-image -->
 		<div id="smplclssc_wrap-headline-bar">
 			<div id="smplclssc_headline-bar">
-				<hgroup id="smplclssc_headline-hgroup">
-					<!--<h1><?php _e( 'Welcome to our blog!', 'simple-classic' ); ?></h1>-->
+				<div id="smplclssc_headline-hgroup">
 					<?php echo apply_filters( 'simpleclassic_navigation', 'simpleclassic_navigation' );//simpleclassic_navigation(); ?>
-				</hgroup>
+				</div>
 				<div id="smplclssc_search">
 					<?php get_search_form(); ?>
 				</div><!-- #smplclssc_search -->

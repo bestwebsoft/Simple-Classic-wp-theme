@@ -1,11 +1,11 @@
 === Simple Classic ===
 Contributors: BestWebLayout, BestWebSoft
 Author URI: http://bestweblayout.com/
-Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
+Donate link: http://bestwebsoft.com/donate/
 Tags: two-columns, left-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, sticky-post, threaded-comments, translation-ready
 Requires at least: 4.2
-Tested up to: 4.5.3
-Stable tag: 1.7
+Tested up to: 4.6
+Stable tag: 1.8
 License: GNU General Public License V3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Simple Classic WordPress Theme, Copyright 2016 BestWebLayout.com
@@ -92,6 +92,9 @@ You can use our contact form, for any support questions: http://bestwebsoft.com/
 
 == Changelog ==
 
+= V1.8 - 24.08.2016 =
+* Update : All functionality for WordPress 4.6 was updated.
+
 = V1.7 - 06.07.2016 =
 * Bugfix: Fixed mismatch coding standards.
 * Bugfix: Fixed theme styles.
@@ -111,43 +114,46 @@ You can use our contact form, for any support questions: http://bestwebsoft.com/
 * Update: Screenshot was updated.
 * Update: The following files were updated: style.css, header.php, functions.php, screenshot.png.
 
-= V 1.4 - 22.07.2014 =
+= V1.4 - 22.07.2014 =
 * Bugfix: Bugs in function.php were fixed.
 * Update: We checked theme for WordPress 3.9.1 and updated readme.txt.
 
-= V 1.3.3 - 07.11.2013 =
+= V1.3.3 - 07.11.2013 =
 * Bugfix: Fixed header image.
 
-= V 1.3.2 - 04.11.2013 =
+= V1.3.2 - 04.11.2013 =
 * Update: Updated function smplclssc_navigation.
 * Update: Updated footer.
 * Bugfix: Fixed custom header support.
 
-= V 1.3.1 - 01.11.2013 =
-* Update: Updated style of posts, sidebar and breadcrumds area.
+= V1.3.1 - 01.11.2013 =
+* Update: Updated style of posts, sidebar and breadcrumbs area.
 * NEW: Added styles for table area.
 
-= V 1.3 - 15.10.2013 =
+= V1.3 - 15.10.2013 =
 * Update: Updated Support of Custom Header.
 * Bugfix: Comment form.
 * NEW: Added file tag.php.
 * NEW: Added Russian language translation.
 
-= V 1.2 - 07.10.2013 =
-* Update: Updatede theme buttons.
+= V1.2 - 07.10.2013 =
+* Update: Updated theme buttons.
 * Bugfix: Choose file area was fixed.
 * NEW: Added file image.php.
 * NEW: Added pagination.
 
-= V 1.1 - 01.10.2013 =
-* Update: Updatet menu in Admin UI.
+= V1.1 - 01.10.2013 =
+* Update: Updated menu in Admin UI.
 * Bugfix : Header Menu was fixed.
 * NEW: Added viewing attachment caption to thumbnails.
 
-= V 1.0 =
-* Ability to use the Simpla Classic theme in you site.
+= V1.0 =
+* Ability to use the Simple Classic theme in you site.
 
 == Upgrade Notice ==
+
+= V1.8 =
+* The compatibility with new WordPress version updated.
 
 = V1.7 =
 Fixed mismatch coding standards. Fixed theme styles. Translations has been updated. Screenshot was updated to size 1200x900. The theme has been tested for the compatibility with WordPress v.4.5.3. Theme was transferred to new WordPress account.
@@ -158,26 +164,26 @@ Typo of textdomain in 404.php was fixed. The <title> tag was removed from header
 = V1.5 =
 We updated the theme to support features in WordPress 4.1.1. Screenshot was updated. The following files were updated: style.css, header.php, functions.php.
 
-= V 1.4 =
+= V1.4 =
 Bugs in function.php were fixed. We checked theme for WordPress 3.9.1 and updated readme.txt.
 
-= V 1.3.3 =
+= V1.3.3 =
 Fixed options for header image.
 
-= V 1.3.2 =
+= V1.3.2 =
 Updated function smplclssc_navigation and footer credit links. Fixed custom header support.
 
-= V 1.3.1 =
+= V1.3.1 =
 Updated styles for post, sidebar and breadcrumbs areas. Added styles for table area.
 
-= V 1.3 =
+= V1.3 =
 Ability to translate your site into russian language. Added tag.php file.Updated support for Custom Header and fixed comment form.
 
-= V 1.2 =
-Added ability to browse images on you site. Added pagination for easier searching needed information.Updated the buttons, which you can includ in your own forms. Fixed working of choose file area.
+= V1.2 =
+Added ability to browse images on you site. Added pagination for easier searching needed information.Updated the buttons, which you can include in your own forms. Fixed working of choose file area.
 
-= V 1.1 =
-Ability to use Menu in Admin UI. Fixed Header Menu, now you can add more then 6 points of menu.Added attachment thumbnails, now image caption will be dislayed in main page.
+= V1.1 =
+Ability to use Menu in Admin UI. Fixed Header Menu, now you can add more then 6 points of menu.Added attachment thumbnails, now image caption will be displayed in main page.
 
-= V 1.0  =
-Ability to use the Simpla Classic theme in you site. 
+= V1.0  =
+Ability to use the Simple Classic theme in you site.

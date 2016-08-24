@@ -79,8 +79,8 @@ function styleforinputfile( input ) {
 				"width":     "225px"
 			} );
 		}
-		$( ':file' ).before( '<label id="choose_file">Choose file...</label>\
-							<label id="file_statys">File is not selected.</label>' );
+		$( ':file' ).before( '<label id="choose_file">' + stringJs.chooseFile + '</label>\
+							<label id="file_statys">' + stringJs.fileNotSel + '</label>' );
 	})( jQuery );
 }
 

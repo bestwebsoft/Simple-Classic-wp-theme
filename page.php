@@ -12,11 +12,6 @@ get_header(); ?>
 		while ( have_posts() ) : the_post(); ?>
 			<h1 class="smplclssc_titleinmain"><?php the_title(); ?></h1>
 			<p><?php the_content(); ?></p>
-			<?php if ( has_tag() ) : ?>
-				<div class="smplclssc_tags">
-					<p><?php the_tags(); ?></p>
-				</div>
-			<?php endif; ?>
 			<div class="smplclssc_post-border">
 				<?php wp_link_pages( array(
 					'before' => '<div class="smplclssc_page-links"><span>' . __( 'Pages: ', 'simple-classic' ) . '</span>',

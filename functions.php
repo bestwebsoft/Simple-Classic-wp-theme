@@ -52,21 +52,15 @@ function simpleclassic_setup() {
 		/* The default header text color. */
 		'default-text-color' => '000',
 		/* The height and width of our custom header. */
-		'width'              => apply_filters( 'simpleclassic_header_image_width', 960 ),
-		'height'             => apply_filters( 'simpleclassic_header_image_height', 283 ),
-		/* Support flexible heights. */
+		'width'              => 960,
+		'height'             => 283,
+		'flex-width'         => true,
 		'flex-height'        => true,
 		/* Random image rotation by default. */
 		'random-default'     => true,
 	);
 	add_theme_support( 'custom-header', $custom_header_support );
 	add_theme_support( 'custom-background' );
-	/* Add a way for the custom background to be styled in the admin panel that controls
-	 * custom headers.
-	 * We'll be using post thumbnails for custom header images on posts and pages.
-	 * We want them to be the size of the header image that we just defined
-	 * Larger images will be auto-cropped to fit, smaller ones will be ignored. See header.php. */
-	set_post_thumbnail_size( $custom_header_support['width'], $custom_header_support['height'], true );
 	/* Add Simple Classic's custom image sizes.
 	 * Used for large feature (header) images. */
 	add_image_size( 'large-feature', $custom_header_support['width'], $custom_header_support['height'], true );
@@ -76,21 +70,25 @@ function simpleclassic_setup() {
 
 /* Sidebar register */
 function simpleclassic_register_sidebar() {
-	register_sidebar( array( 'name' => __( 'Sidebar', 'simple-classic' ), 'id' => 'sidebar-1' ) );
+	register_sidebar( array(
+		'name' => __( 'Sidebar', 'simple-classic' ),
+		'id' => 'sidebar-1',
+	) );
 }
 
 /* Function that connects scripts for theme */
 function simpleclassic_script() {
-	wp_enqueue_script( 'jquery' ); ?>
-	<script type="text/javascript">
-		var search = '<?php echo __( 'Search ...', 'simple-classic' ); ?>';
-		var url    = theme_url = '<?php echo get_stylesheet_directory_uri(); ?>';
-	</script>
-	<?php wp_enqueue_script( 'simpleclassic-main-script', get_stylesheet_directory_uri() . '/js/script.js' );
+	wp_enqueue_script( 'simpleclassic-main-script', get_stylesheet_directory_uri() . '/js/script.js', array( 'jquery' ) );
+	$string_js = array(
+		'chooseFile'      => __( 'Choose file...', 'simple-classic' ),
+		'fileNotSel' => __( 'File is not selected.', 'simple-classic' ),
+	);
+	wp_localize_script( 'simpleclassic-main-script', 'stringJs', $string_js );
 	wp_enqueue_style( 'simpleclassic-style', get_stylesheet_uri() );
-	wp_register_style( 'simpleclassic-style-ie', get_stylesheet_directory_uri() . '/css/ie.css' );
-	$GLOBALS['wp_styles']->add_data( 'simpleclassic-style-ie', 'conditional', 'IE' );
-	wp_enqueue_style( 'simpleclassic-style-ie' );
+	wp_enqueue_style( 'simpleclassic-style-ie', get_stylesheet_directory_uri() . '/css/ie.css' );
+	wp_style_add_data( 'simpleclassic-style-ie', 'conditional', 'IE' );
+	wp_enqueue_script( 'simpleclassic-script-ie', 'http://ie7-js.googlecode.com/svn/trunk/lib/IE9.js' );
+	wp_script_add_data( 'simpleclassic-script-ie', 'conditional', 'lt IE 9' );
 	if ( is_singular() ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -107,42 +105,49 @@ function simpleclassic_content_nav( $html_id ) {
 	<?php endif;
 }
 
-/* Styles the header image displayed on the Appearance > Header admin panel.
- *
- * Referenced via custom-header hook in simpleclassic_setup(). */
+/* Styles of comments list */
 function simpleclassic_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 	switch ( $comment->comment_type ) :
 		case 'pingback'  :
 		case 'trackback' : ?>
 			<li class="post pingback">
-			<p><?php _e( 'Pingback:', 'simple-classic' ); ?><?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit', 'simple-classic' ), ' ' ); ?></p>
+				<p>
+					<?php _e( 'Pingback:', 'simple-classic' );
+					comment_author_link();
+					edit_comment_link( __( 'Edit', 'simple-classic' ), ' ' ); ?>
+				</p>
+			</li>
 			<?php break;
 		default : ?>
-		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-			<div id="comment-<?php comment_ID(); ?>">
-				<div class="comment-author vcard">
-					<?php echo get_avatar( $comment, 64 ); ?>
-					<?php printf( '%s <span class="says">' . __( 'says:', 'simple-classic' ) . '</span>', sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
-				</div><!-- .comment-author .vcard -->
-				<?php if ( '0' == $comment->comment_approved ) : ?>
-					<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'simple-classic' ); ?></em>
-					<br />
-				<?php endif; ?>
-				<div class="comment-meta commentmetadata">
-					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
-						<?php /* translators: 1: date, 2: time */
-						printf( '%1$s ' . __( 'at', 'simple-classic' ) . ' %2$s', get_comment_date(), get_comment_time() ); ?></a>
-				</div><!-- .comment-meta .commentmetadata -->
-				<div class="comment-body"><?php comment_text(); ?></div>
-				<div class="reply">
-					<p><?php comment_reply_link( array_merge( $args, array(
-							'depth'     => $depth,
-							'max_depth' => $args['max_depth'],
-						) ) );
-						edit_comment_link( __( 'Edit', 'simple-classic' ), ' ' ); ?></p>
-				</div><!-- .reply -->
-			</div><!-- #comment-##  -->
+			<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+				<div id="comment-<?php comment_ID(); ?>">
+					<div class="comment-author vcard">
+						<?php echo get_avatar( $comment, 64 );
+						printf( '%s <span class="says">' . __( 'says:', 'simple-classic' ) . '</span>', sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+					</div><!-- .comment-author .vcard -->
+					<?php if ( '0' == $comment->comment_approved ) : ?>
+						<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'simple-classic' ); ?></em>
+						<br />
+					<?php endif; ?>
+					<div class="comment-meta commentmetadata">
+						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
+							<?php /* translators: 1: date, 2: time */
+							printf( '%1$s ' . __( 'at', 'simple-classic' ) . ' %2$s', get_comment_date(), get_comment_time() ); ?>
+						</a>
+					</div><!-- .comment-meta .commentmetadata -->
+					<div class="comment-body"><?php comment_text(); ?></div>
+					<div class="reply">
+						<p>
+							<?php comment_reply_link( array_merge( $args, array(
+								'depth'     => $depth,
+								'max_depth' => $args['max_depth'],
+							) ) );
+							edit_comment_link( __( 'Edit', 'simple-classic' ), ' ' ); ?>
+						</p>
+					</div><!-- .reply -->
+				</div>
+			</li><!-- #comment-##  -->
 			<?php break;
 	endswitch;
 }
@@ -164,7 +169,7 @@ function simpleclassic_navigation() {
 	$after            = '</span>'; /* Tag after the current "crumb" */
 	/* End options */
 	$homelink   = home_url() . '/';
-	$linkbefore = '<span">';
+	$linkbefore = '<span>';
 	$linkafter  = '</span>';
 	$linkattr   = ' rel=""';
 	$link       = $linkbefore . '<a' . $linkattr . ' href="%1$s">%2$s</a>' . $linkafter;

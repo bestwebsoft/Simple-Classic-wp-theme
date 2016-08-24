@@ -9,7 +9,7 @@
 
 <form id="smplclssc_search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
 	<div>
-		<input class="smplclssc_search-txt" type="text" name="s" id="s" placeholder="<?php esc_attr_e( 'Enter search keyword', 'simple-classic' ); ?>" value="<?php echo get_search_query(); ?>" onfocus="if ( this.value == '<?php _e( 'Enter search keyword', 'simple-classic' ); ?>' ) { this.value = ''; }" onblur="if ( this.value == '' ) { this.value = '<?php _e( 'Enter search keyword', 'simple-classic' ); ?>'; }" />
+		<input class="smplclssc_search-txt" type="text" name="s" id="s" placeholder="<?php esc_attr_e( 'Enter search keyword', 'simple-classic' ); ?>" value="<?php echo get_search_query(); ?>"  />
 	</div>
 	<div>
 		<input class="smplclssc_search-btn" type="submit" value="<?php _e( 'search', 'simple-classic' ); ?>" />

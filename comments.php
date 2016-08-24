@@ -30,11 +30,6 @@
 			<div class="alignleft"><?php previous_comments_link() ?></div>
 			<div class="alignright"><?php next_comments_link() ?></div>
 		</div><!-- .navigation -->
-	<?php else : /* This is displayed if there are no comments so far */
-		if ( comments_open() ) :
-			/* If comments are open, but there are no comments. */
-		else : /* Comments are closed */
-		endif;
-	endif;
+	<?php endif;
 	comment_form(); ?>
 </div><!-- #comments -->
